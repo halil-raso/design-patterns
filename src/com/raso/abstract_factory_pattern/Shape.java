@@ -1,0 +1,5 @@
+package com.raso.abstract_factory_pattern;
+
+public interface Shape {
+    public void draw();
+}
