@@ -24,9 +24,13 @@ public class CriteriaOR implements Criteria{
 
         ArrayList<Person> finalPersonList = new ArrayList<>();
 
+        for(Person p: firstMeetedCriteria){
+            finalPersonList.add(p);
+        }
+
         for ( Person p: secondMeetedCriteria
              ) {
-            if(!firstMeetedCriteria.contains(p)){
+            if(!finalPersonList.contains(p)){
                 finalPersonList.add(p);
             }
         }

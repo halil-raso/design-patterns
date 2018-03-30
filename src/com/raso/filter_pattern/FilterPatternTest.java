@@ -33,6 +33,7 @@ public class FilterPatternTest {
         ArrayList<Person> marriedPersonList = marriedCriteria.meetCriteria(personList);
 
         ArrayList<Person> marriedMalePersonList = criteriaAND.meetCriteria(personList);
+        ArrayList<Person> marriedOrSinglePersonList = criteriaOR.meetCriteria(personList);
 
 
         System.out.println("Male Persons");
@@ -47,8 +48,13 @@ public class FilterPatternTest {
         System.out.println("Married Persons");
         printPersons(marriedPersonList);
 
-        System.out.println("Married Male Persons");
+        System.out.println("Married and Male Persons");
         printPersons(marriedMalePersonList);
+
+        System.out.println("Married or single Persons");
+        printPersons(marriedOrSinglePersonList);
+
+
 
     }
 
